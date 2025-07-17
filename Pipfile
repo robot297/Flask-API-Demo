@@ -5,13 +5,13 @@ name = "pypi"
 
 [packages]
 flask = "*"
-connexion = "*"
 swagger-ui-bundle = "*"
 pytest = "*"
 flask-sqlalchemy = "*"
 flask-caching = "*"
 wheel = "*"
 gunicorn = "*"
+connexion = {extras = ["uvicorn"], version = "*"}
 
 [dev-packages]
 pylint = "*"

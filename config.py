@@ -5,7 +5,7 @@ from flask_caching import Cache
 
 my_app = connexion.App(__name__, specification_dir='./swagger')
 
-SQLALCHEMY_DATABASE_URI = 'sqlite:///' + os.path.join(my_app.root_path, 'database/database.db')
+SQLALCHEMY_DATABASE_URI = 'sqlite:///' + os.path.join(my_app.app.root_path, 'database/database.db')
 
 my_app.app.config['SQLALCHEMY_DATABASE_URI'] = SQLALCHEMY_DATABASE_URI
 my_app.app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
